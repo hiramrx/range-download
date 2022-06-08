@@ -1,0 +1,21 @@
+{
+  "name": "flyhiram/range-download",
+  "description": "php 分片下载",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "hiramx",
+      "email": "flyhiram@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle" : "^7.0",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "RangeDownload\\" : "src/"
+    }
+  }
+}
