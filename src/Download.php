@@ -4,6 +4,7 @@ namespace RangeDownload;
 
 use GuzzleHttp\Pool;
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Request;
 
 class Download
 {
@@ -111,7 +112,7 @@ class Download
                     );
 //                    $command = $this->client->getCommand('getObject', $params);
 //                    $request = $this->client->commandToRequestTransformer($command);
-                    $request = $this->client->get($this->url, ['headers' => $params, 'verify' => false]);
+                    $request = new Request('GET', $this->url, $params);
                     $index += 1;
                     yield $request;
                 } else {
